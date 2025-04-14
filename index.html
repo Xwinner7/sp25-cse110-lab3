@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Meeting Minutes</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/Xwinner7/CSE110_Lab_Week2/refs/heads/main/assets/favicon.ico" type="image/x-icon">
+
+  </head>
+
+  <body>
+    <header>
+        <h1>Team 12 First Meeting</h1>
+        <h2>Brainstorming Seesion</h2>
+        <h3>Date: <time datetime="2025-04-12"></time></h3>
+
+        <nav>
+            <a href="#attendance">Attendance</a> |
+            <a href="#agenda">Agenda</a> |
+            <a href="#task">Task</a> |
+            <a href="#media">Media</a> |
+            <a href="#comment">Comment</a> |
+        </nav>
+    </header>
+
+    <hr>
+
+    <main>
+        <section id="attendance">
+            <h2>Attendance List</h2>
+            <ul>
+                <li><strong>James Forest</strong> (present)</li>
+                <li><strong>Fabio Ruhland</strong> (present)</li>
+                <li><b>Moises Mendoza</b> (present)</li>
+                <li><b>Amirreza Shams</b> (present)</li>
+                <li><b>Sriharsha Kavuri</b> (present)</li>
+                <li><b>Paz Mogrelia</b> (present)</li>
+                <li><b>Changrong Li</b> (present)</li>
+                <li><b>Xiuwen Zhu</b> (present)</li>
+                <li><b>Nimai Kasibatla</b> (present)</li>
+                <li><em>Jungwon Kim</em> (absent)</li>
+                <li><em>Evan Wu</em> (absent)</li>
+            </ul>
+        </section>
+
+        <section id="agenda">
+            <h2>Meeting Agenda</h2>
+            <ol>
+                <li>Discuss on the team name and brand</li>
+                <li>Build the team page</li>
+                <li>Decide on how to introduce the team</li>
+                <li>Assign tasks</li>
+                <li>Schedule next meeting</li>
+            </ol>
+        </section>
+
+        <section id="task">
+            <h2>Task</h2>
+            <div>
+                <h3>Unfinished Tasks</h3>
+                <p>Still need to record the video for our introduction of the team.</p>
+
+                <h3>New Task</h3>
+                <p>Need to brainstorm for the warm up project.</p>
+                <span>Priority: High</span>
+            </div>
+        </section>
+
+        <section id="questions">
+            <h2>Questions & Feedbacks</h2>
+            <details>
+                <summary>Click to view questions</summary>
+                <p>What is everyone's schedule like for next week?</p>
+                <p>What is still needed to be done?</p>
+                <p>Should we incorporate meme into our video?</p>
+            </details>
+        </section>
+
+        <section id="media">
+            <h2>Media</h2>
+            <h3>Team Photo</h3>
+            <img src="assets/team.jpg" alt="Members of Git Commitment Issues" width="300">
+
+            <h3>Meeting Recording</h3>
+            <video controls width="300">
+                <source src="assets/meeting.mp4" type="video/mp4">
+                Video not supported by browser.
+            </video>
+
+            <h3>Audio Recording</h3>
+            <audio controls>
+                <source src="assets/meeting.mp3" type="audio/mpeg">
+                Audio not supported by browser.
+            </audio>
+        </section>
+    </main>
+
+    <footer>
+        <section id="comment">
+            <h2>Leave Your Comment</h2>
+            <form>
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name"><br><br>
+
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email"><br><br>
+
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Feedback</legend>
+                    <label for="topic">Meeting Topic:</label>
+                    <input list="topics" id="topic" name="topic">
+                    <datalist id="topics">
+                        <option value="Brainstorming">
+                        <option value="Format and Distribution">
+                    </datalist><br><br>
+
+                    <label for="rating">Rating:</label>
+                    <select id="rating" name="rating">
+                        <option value="good">Good</option>
+                        <option value="average">Average</option>
+                        <option value="poor">Poor</option>
+                    </select><br><br>
+
+                    <label>Would you prefer online meeting more?</label>
+                    <input type="radio" id="yes" name="prefer" value="yes">
+                    <label for="yes">Yes</label>
+                    <input type="radio" id="no" name="prefer" value="no">
+                    <label for="no">No</label>
+
+                    <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+                    <label for="subscribe">Subscribe for future more meeting notes</label>
+
+                    <label for="comments">Additional Thoughts</label>
+                    <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br><br>
+                    <button type="submit">Submit Comment</button>
+                </fieldset>
+            </form>
+        </section>
+
+        <p>&copy; 2025 Team Git Commitment Issues. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
