@@ -11,6 +11,6 @@ assignees: Xwinner7
 What is needed to be done?
 
 ### Requirement
-- [task] Create standup.md template 
-- [enhancement] Style meeting minutes with CSS
-- [documentation] Add CSS validation screenshot
+- [] Create standup.md template 
+- [] Style meeting minutes with CSS
+- [] Add CSS validation screenshot
