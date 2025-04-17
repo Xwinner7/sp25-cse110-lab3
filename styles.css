@@ -229,10 +229,6 @@ footer {
   font-size: 0.9rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  body {
-    background: color(display-p3 0.1 0.1 0.1);
-  }
 @media (min-width: 768px) {
   #task div {
     display: flex;
