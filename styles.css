@@ -1,311 +1,310 @@
 /* Style for index.html, the Team Meeting Minutes*/
-:root {
-  --bg--beige: #f5eee3;
-  --text-dark: #3b2115;
-  --git-red: #8a2e2e;
-  --pure-white: #fdfdfd;
-  --accent-beige: #e7cab4;
-  --dark-red: #552d1e;
-  --font-main: 'Open Sans', system-ui, sans-serif;
-  --heading-font: 'Montserrat', system-ui, sans-serif;
-  --border-default: 1px solid color-mix(in srgb, var(--git-red) 50%, var(--accent-beige));
-  --accent-peru: peru;
-  --wide-peru: color(diplay-p3 0.8 0.52 0.25);
-}
-@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap);
-
-.highlight-box {
-  margin: 1rem 0;
-  margin-top: 0.5rem;
-  padding: 1.5rem;
-  padding-bottom: 1rem;
-  border: 2px solid var(--accent-peru);
-  border-radius: 8px;
-  height: auto;
-  min-height: 100px;
-  width: 90%;
-  max-width: 800px;
-  background-color: color-mix(in srgb, var(--bg-beige) 90%, var(--accent-peru));
+:root { /*Define reusable CSS varibles here*/
+  --bg--beige: #f5eee3; /*Main background color*/
+  --text-dark: #3b2115; /*Main text color*/
+  --git-red: #8a2e2e; /*The brand red color*/
+  --pure-white: #fdfdfd; /*Clean white color for cards*/
+  --accent-beige: #e7cab4; /*Light beige for accents*/
+  --dark-red: #552d1e; /* Dark red color for headings */
+  --font-main: 'Open Sans', system-ui, sans-serif; /* Body font */
+  --heading-font: 'Montserrat', system-ui, sans-serif; /* Headings font */
+  --border-default: 1px solid color-mix(in srgb, var(--git-red) 50%, var(--accent-beige)); /* Borders*/
+  --accent-peru: peru; /* Another peru color for accent */
+  --wide-peru: color(diplay-p3 0.8 0.52 0.25); /* Wide-gamut color */
 }
 
-section.highlight-box {
-  border-left: 5px solid var(--accent-peru);
-  box-shadow: 0 3px 6px color-mix(in srgb, var(--dark-red) 15%, transparent);
-}
-button.submit-button {
-  background-color: var(--accent-peru);
-  color: var(--pure-white);
-}
-button.submit-button:hover {
-  background-color: color-mix(in srgb, var(--accent-peru) 80%, var(--dark-red));
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap); /* Import Google fonts to be use on the website */
+
+* { /* Reset default browser styles */
+  box-sizing: broder-box; /* Include padding in element sizing */
+  margin: 0; /* Removes default browser margins */
+  padding: 0; /* Removes default browser padding */
 }
 
-* {
-  box-sizing: broder-box;
-  margin: 0;
-  padding: 0;
+body { /* Styles for the entire page body */
+  font-family: var(--font-main); /* Use costom font */
+  color: var(--text-dark); /* Text color */
+  background-color: var(--bg-beige, #f5eee3); /* Background with fallback varible */
+  line-height: 1.6; /* Line spacing */
+  padding: 2rem; /* Page padding */
+  max-width: 1200px; /* Maximum content width */
+  margin: 0 auto; /* Center content horizontally */
 }
 
-body {
-  font-family: var(--font-main);
-  color: var(--text-dark);
-  background-color: var(--bg-beige, #f5eee3);
-  line-height: 1.6;
-  padding: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+h1, h2, h3, h4 { /* Heading styles */
+  font-family: var(--heading-font); /* Font for headings */
+  color: var(--dark-red); /* Dark red color for headings*/
+  margin-bottom: 0.5em; /* Space below headings */
 }
 
-h1, h2, h3, h4 {
-  font-family: var(--heading-font);
-  color: var(--dark-red);
-  margin-bottom: 0.5em;
+h1 { /* Main page title */
+  font-size: 2.5rem; /* Large text */
+  text-align: center; /* Center alignment */
+  margin-bottom: 0.5rem; /* Reduced bottom margin */
 }
 
-h1 {
-  font-size: 2.5rem;
-  text-align: center;
-  margin-bottom: 0.5rem;
+h2 { /* Section headings */
+  font-size: 1.8rem; /* Medium large font size */
+  border-bottom: var(--border-default); /* Underline effect */
+  padding-bottom: 0.3rem; /* Space between text and border */
 }
 
-h2 {
-  font-size: 1.8rem;
-  border-bottom: var(--border-default);
-  padding-bottom: 0.3rem;
+h3 { /* Subheadings */
+  font-size: 1.4rem; /* Font size to be slightly larger than body */
+  color: var(--git-red); /* Color to be red */
 }
 
-h3 {
-  font-size: 1.4rem;
-  color: var(--git-red);
+h3 + p { /* Paragraphs immediately after h3 */
+  margin-top: -0.5rem; /* Pull paragraph closer to heading */
+  font-size: 0.95rem; /* Slightly smaller text size */
 }
 
-h3 + p {
-  margin-top: -0.5rem;
-  font-size: 0.95rem;
+h2 ~ p { /* All paragraphs after h2 */
+  color: color-mix(in srgb, var(--text-dark) 90%, transparent); /* Semi-transparent text */
 }
 
-h2 ~ p {
-  color: color-mix(in srgb, var(--text-dark) 90%, transparent);
+main > section { /* Main content sections */
+  transition: transform 0.2s ease; /* Smooth hover effect */
 }
 
-main > section {
-  transition: transform 0.2s ease;
+header { /* Header section */
+  background-color: var(--pure-white); /* White background */
+  padding: 1.5rem; /* Inner spacing */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow */
+  margin-bottom: 2rem; /* Space below header */
 }
 
-header {
-  background-color: var(--pure-white);
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  margin-bottom: 2rem;
+nav { /* Navigation */
+  margin-top: 1rem; /* Space above navigation */
+  text-align: center; /* Center links */
 }
 
-nav {
-  margin-top: 1rem;
-  text-align: center;
+nav a { /* Navigation links */
+  color: var(--git-red); /* Red link color */
+  text-decoration: none; /* Remove underlines */
+  font-weight: 600; /* Semi-bold */
+  padding: 0.5rem; /* Clickable area */
+  transition: color 0.3s ease; /* Smooth color change */
 }
 
-nav a {
-  color: var(--git-red);
-  text-decoration: none;
-  font-weight: 600;
-  padding: 0.5rem;
-  transition: color 0.3s ease;
+nav a:hover { /* Hover state for links */
+  color: --bg-beige; /* Lighter color on hover */
+  text-decoration:underline; /* Underline on hover */
 }
 
-nav a:hover {
-  color: --bg-beige;
-  text-decoration:underline;
+main { /* Main content grid */
+  display: grid; /* Grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+  gap: 1.5rem; /* Space between items */
+  margin-bottom: 2rem; /* Space below main */
 }
 
-main {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 2rem;
+section { /* Content sections */
+  background-color: var(--pure-white); /* White background */
+  padding: 1.5rem; /* Inner spacing */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow */
 }
 
-section {
-  background-color: var(--pure-white);
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-#attendance ul {
-  list-style-type: none;
+#attendance ul { /* Attendance list */
+  list-style-type: none; /* Remove default bullets */
 }
 
 #attendance li{
-  padding: 0.3rem 0;
-  position: relative;
-  padding-left: 1.5rem;
+  padding: 0.3rem 0; /* Vertical spacing */
+  position: relative; /* For custom bullet positioning */
+  padding-left: 1.5rem; /* Space for custom bullet */
 }
 
-#attendance li:before {
-  content: "•";
-  color: var(--git-red);
-  position: absolute;
-  left: 0;
+#attendance li:before { /* Custom bullet point */
+  content: "•"; /* Bullet character */
+  color: var(--git-red); /* Red color for the bullet */
+  position: absolute; /* Position relative to li */
+  left: 0; /* Align to left edge */
 }
 
-#agenda ol {
-  padding-left: 1.5rem;
+#agenda ol { /* Agenda ordered list */
+  padding-left: 1.5rem; /* Indent list */
 }
-#agenda li {
-  margin-bottom: 0.5rem;
-}
-
-#task div {
-  border-left: 4px solid var(--git-red);
-  padding-left: 1rem;
-  margin: 1rem 0;
-}
-#task span {
-  display: inline-block;
-  background-color: var(--git-red);
-  color: white;
-  padding: 0.3rem 0.6rem;
-  border-radius: 4px;
-  margin-top: 0.5rem;
-  font-size: 0.9rem;
+#agenda li { 
+  margin-bottom: 0.5rem; /* Space between items */
 }
 
-details {
-  background-color: var(--accent-beige);
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  margin-top: 1rem;
+#task div { /* Task container */
+  border-left: 4px solid var(--git-red); /* Red accent border */
+  padding-left: 1rem; /* Inner spacing */
+  margin: 1rem 0; /* Vertical spacing */
+}
+#task span { /* Task priority label */
+  display: inline-block; /*Allow margins  */
+  background-color: var(--git-red); /* Red background */
+  color: white; /* White text */
+  padding: 0.3rem 0.6rem; /* Inner spacing */
+  border-radius: 4px; /* Rounded corners */
+  margin-top: 0.5rem; /* Space above */
+  font-size: 0.9rem; /* Smaller text size */
 }
 
-summary {
-  cursor: pointer;
-  font-weight: 600;
+details { /* Expandable details */
+  background-color: var(--accent-beige); /* Light beige background */
+  padding: 0.5rem 1rem; /* Inner spacing */
+  border-radius: 4px; /* Rounded corners */
+  margin-top: 1rem; /* Space above */
 }
 
-details p {
-  margin-top: 0.5rem;
-  padding-left: 1rem;
+summary { /* Details summary */
+  cursor: pointer; /* Hand cursor */
+  font-weight: 600; /* Bold text */
 }
 
-#media img, #media video, #media audio {
-  display: block;
-  margin: 1rem 0;
-  border-radius:4px;
-  border: var(--border-default);
+details p { /* Details content */
+  margin-top: 0.5rem; /* Space above */
+  padding-left: 1rem; /* Indent content */
+}
+
+#media img, #media video, #media audio { /* Media elements */
+  display: block; /* Block display */
+  margin: 1rem 0; /* Vertical spacing */
+  border-radius:4px; /* Slightly rounded */
+  border: var(--border-default); /* Custom border */
 }
 
 form {
-  margin-top: 1rem;
+  margin-top: 1rem; /* Space above form */
 }
 
-fieldset {
-  border: var(--border-default);
-  border-radius: 4px;
-  padding: 1rem;
-  margin-bottom: 1rem;
+fieldset { /* Form field groups */
+  border: var(--border-default); /* Custom border */
+  border-radius: 4px; /* Rounded corners */
+  padding: 1rem; /* Inner spacing */
+  margin-bottom: 1rem; /* Space below */
 }
 
-legend {
-  padding: 0 0.5rem;
-  color: var(--git-red);
-  font-weight: 600;
+legend { /* Fieldset labels */
+  padding: 0 0.5rem; /* Horizontal spacing */
+  color: var(--git-red); /* Red color text */
+  font-weight: 600; /* Bold text */
 }
 
-label {
-  display: block;
-  margin: 0.5rem 0 0.2rem;
+label { /* Form labels */
+  display: block; /* Full width  */
+  margin: 0.5rem 0 0.2rem; /* Spacing */
 }
 
-input[type="text"],input[type="date"],select,textarea {
-  width: 100%;
-  padding: 0.5rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-family: var(--font-main);
+input[type="text"],input[type="date"],select,textarea { /* Text inputs */
+  width: 100%; /* Full width */
+  padding: 0.5rem; /* Inner spacing */
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 4px; /* Rounded corners */
+  font-family: var(--font-main); /* Consistent font */
 }
-input[type="radio"],input[type="checkbox"] {
-  margin-right: 0.5rem;
-}
-
-button[type="submit"] {
-  background-color: var(--git-red);
-  color: white;
-  border: none;
-  padding: 0.7rem 1.5rem;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: 600;
-  margin-top: 1rem;
-  transition: background-color 0.3s ease;
+input[type="radio"],input[type="checkbox"] { /* Radio,checkbox inputs */
+  margin-right: 0.5rem; /* Space after */
 }
 
-button[type="submit"]:hover {
-  background-color: var(--dark-red);
-}
-button[type="submit"]:active {
-  transform: translateY(1px);
-  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+button[type="submit"] { /* Submit button */
+  background-color: var(--git-red); /* Red background */
+  color: white; /* White text color */
+  border: none; /* No border */
+  padding: 0.7rem 1.5rem; /* Button size */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Hand cursor */
+  font-weight: 600; /* Bold text */
+  margin-top: 1rem; /* Space above */
+  transition: background-color 0.3s ease; /* Color transition of background */
 }
 
+button[type="submit"]:hover { /* Submit button hover */
+  background-color: var(--dark-red); /* Darker red background */
+}
+button[type="submit"]:active { /* Submit button active state */
+  transform: translateY(1px); /* Slight push down */
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2); /* Pressed effect */
+}
+.highlight-box { /* Highlight box that contains important content */
+  margin: 1rem 0; /* Vertical spacing */
+  margin-top: 0.5rem; /* Extra top margin */
+  padding: 1.5rem; /* Inner spacing */
+  padding-bottom: 1rem; /* Less padding at bottom */
+  border: 2px solid var(--accent-peru);  /* Border using peru color */
+  border-radius: 8px; /* Rounded corners */
+  height: auto; /* Flexible height */
+  min-height: 100px; /* Minimum height */
+  width: 90%; /* Relative width */
+  max-width: 800px; /* Maximum width */
+  background-color: color-mix(in srgb, var(--bg-beige) 90%, var(--accent-peru)); /* Mixed color background */
+}
+
+section.highlight-box { /* Highlight box section */
+  border-left: 5px solid var(--accent-peru); /* Thicker left border */
+  box-shadow: 0 3px 6px color-mix(in srgb, var(--dark-red) 15%, transparent); /* Subtle shadow */
+}
+button.submit-button { /* Submit button styling */
+  background-color: var(--accent-peru); /* Use peru color */
+  color: var(--pure-white); /* White text color */
+}
+button.submit-button:hover { /* Submit button hover state */
+  background-color: color-mix(in srgb, var(--accent-peru) 80%, var(--dark-red)); /* Darker color when hovered */
+}
 footer {
-  background-color:rgba(253, 245, 230, 0.9);
-  text-align: center;
-  margin-top: 2rem;
-  padding: 1rem;
-  border-top: var(--border-default);
-  font-size: 0.9rem;
+  background-color:rgba(253, 245, 230, 0.9); /* Semi-transparent */
+  text-align: center; /* Center content */
+  margin-top: 2rem; /* Space above */
+  padding: 1rem; /* Inner spacing */
+  border-top: var(--border-default); /* Top border */
+  font-size: 0.9rem; /* Smaller text size */
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) { /* Medium screens for tablets */
   #task div {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 0.5rem;
+    display: flex; /* Flex layout */
+    flex-direction: column; /* Vertical stacking */
+    justify-content: space-between; /* Space distribution */
+    align-items: flex-start; /* Left alignment */
+    gap: 0.5rem; /* Space between items */
   }
   #task span {
-    background-color: hsl(0, 50%, 35%);
-    align-self: flex-start;
+    background-color: hsl(0, 50%, 35%); /* Dark red background */
+    align-self: flex-start; /* Left align */
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 992px) { /* Large screens for desktops */
   #media {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 2rem;
-    align-items: center;
+    display: grid; /* Grid layout */
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    grid-gap: 2rem; /* Space between */
+    align-items: center; /* Vertical centering */
   }
   #media h3 {
-    grid-column: span 2;
+    grid-column: span 2; /* Heading spans both columns */
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 600px) { /* Small screens for mobile */
   body {
-    padding: 1rem;
+    padding: 1rem; /* Less padding */
   }
   h1 {
-    font-size: 2rem;
+    font-size: 2rem; /* Smaller heading */
   }
   header {
-    padding: 1rem;
+    padding: 1rem; /* Compact header */
   }
   nav a {
-    display: block;
-    margin: 0.3rem 0;
+    display: block; /* Stack links vertically */
+    margin: 0.3rem 0; /* Space between links */
   }
 }
 
-section:has(details) {
+section:has(details) { /* Style sections containing details elements */
   background-color: color-mix(in srgb, var(--pure-white) 90%, var(--accent-beige));
 }
 
-fieldset {
+fieldset { /* Nested selector syntax that was new */
   & legend {
-    font-size: 1.1rem;
+    font-size: 1.1rem; /* Slightly larger */
   }
   & label:not([for="subscribe"]) {
-    font-weight: 600;
+    font-weight: 600; /* Bold labels */
   }
 }
