@@ -5,7 +5,7 @@
 - Member 2
 - Member 3
 
-## Individual Updates
+## Individual Updates/Progress Tracking
 
 ### [Name]
 **What did I work on yesterday?**
@@ -28,8 +28,8 @@
 - Any challenges
 
 ## Action Items
-- [] [Task]
-- [] [Task]
+-[] [Task]
+-[] [Task]
 
 ## Decisions Made
 - Note of any important decisions made for the team
