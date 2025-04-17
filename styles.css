@@ -21,7 +21,7 @@
 body {
   font-family: var(--font-main);
   color: var(--text-dark);
-  background-color: var(--bg-beige);
+  background-color: var(--bg-beige, #f5eee3);
   line-height: 1.6;
   padding: 2rem;
   max-width: 1200px;
@@ -86,7 +86,7 @@ nav a {
 }
 
 nav a:hover {
-  color: var(--dark-red);
+  color: darkorange;
   text-decoration:underline;
 }
 
@@ -221,6 +221,7 @@ button[type="submit"]:active {
 }
 
 footer {
+  background-color:rgba(253, 245, 230, 0.9);
   text-align: center;
   margin-top: 2rem;
   padding: 1rem;
@@ -228,13 +229,20 @@ footer {
   font-size: 0.9rem;
 }
 
+@media (prefers-color-scheme: dark) {
+  body {
+    background: color(display-p3 0.1 0.1 0.1);
+  }
 @media (min-width: 768px) {
   #task div {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
     gap: 0.5rem;
   }
   #task span {
+    background-color: hsl(0, 50%, 35%);
     align-self: flex-start;
   }
 }
@@ -242,7 +250,8 @@ footer {
   #media {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    grid-gap: 2rem;
+    align-items: center;
   }
   #media h3 {
     grid-column: span 2;
