@@ -14,8 +14,8 @@
 
 * {
   box-sizing: broder-box;
-  margin 0;
-  padding 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -49,6 +49,19 @@ h2 {
 h3 {
   font-size: 1.4rem;
   color: var(--git-red);
+}
+
+h3 + p {
+  margin-top: -0.5rem;
+  font-size: 0.95rem;
+}
+
+h2 ~ p {
+  color: color-mix(in srgb, var(--text-dark) 90%, transparent);
+}
+
+main > section {
+  transition: transform 0.2s ease;
 }
 
 header {
@@ -201,6 +214,10 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
   background-color: var(--dark-red);
+}
+button[type="submit"]:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }
 
 footer {
