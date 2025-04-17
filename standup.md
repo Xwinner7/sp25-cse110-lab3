@@ -28,8 +28,8 @@
 - Any challenges
 
 ## Action Items
--[] [Task]
--[] [Task]
+[] [Task]
+[] [Task]
 
 ## Decisions Made
 - Note of any important decisions made for the team
