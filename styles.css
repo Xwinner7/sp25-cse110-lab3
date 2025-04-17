@@ -9,8 +9,36 @@
   --font-main: 'Open Sans', system-ui, sans-serif;
   --heading-font: 'Montserrat', system-ui, sans-serif;
   --border-default: 1px solid color-mix(in srgb, var(--git-red) 50%, var(--accent-beige));
+  --accent-peru: peru;
+  --wide-peru: color(diplay-p3 0.8 0.52 0.25);
 }
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap);
+
+.highlight-box {
+  margin: 1rem 0;
+  margin-top: 0.5rem;
+  padding: 1.5rem;
+  padding-bottom: 1rem;
+  border: 2px solid var(--accent-peru);
+  border-radius: 8px;
+  height: auto;
+  min-height: 100px;
+  width: 90%;
+  max-width: 800px;
+  background-color: color-mix(in srgb, var(--bg-beige) 90%, var(--accent-peru));
+}
+
+section.highlight-box {
+  border-left: 5px solid var(--accent-peru);
+  box-shadow: 0 3px 6px color-mix(in srgb, var(--dark-red) 15%, transparent);
+}
+button.submit-button {
+  background-color: var(--accent-peru);
+  color: var(--pure-white);
+}
+button.submit-button:hover {
+  background-color: color-mix(in srgb, var(--accent-peru) 80%, var(--dark-red));
+}
 
 * {
   box-sizing: broder-box;
