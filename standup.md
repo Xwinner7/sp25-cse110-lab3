@@ -8,23 +8,23 @@
 ## Individual Updates/Progress Tracking
 
 ### [Name]
-**What did I work on yesterday?**
+1. **What did I work on yesterday?**
 - Brief bullet points of completed work
 
-**What am I working on today?**
+2. **What am I working on today?**
 - Planned tasks
 
-**What issues are blocking me?**
+3. **What issues are blocking me?**
 - Any possible obstacles
 
 ### [Name]
-**'Yesterday'**
+1. **'Yesterday'**
 - work that completed
 
-**'Today'**
+2. **'Today'**
 - Task for the day
 
-**'Blockers'**
+3. **'Blockers'**
 - Any challenges
 
 ## TO-DOs
