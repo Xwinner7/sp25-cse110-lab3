@@ -12,10 +12,11 @@
   --accent-peru: peru; /* Another peru color for accent */
   --wide-peru: color(diplay-p3 0.8 0.52 0.25); /* Wide-gamut color */
 }
+
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap); /* Import Google fonts to be use on the website */
 
 * { /* Reset default browser styles */
-  box-sizing: broder-box; /* Include padding in element sizing */
+  box-sizing: border-box; /* Include padding in element sizing */
   margin: 0; /* Removes default browser margins */
   padding: 0; /* Removes default browser padding */
 }
@@ -79,7 +80,7 @@ nav a { /* Navigation links */
   transition: color 0.3s ease; /* Smooth color change */
 }
 nav a:hover { /* Hover state for links */
-  color: --bg-beige; /* Lighter color on hover */
+  color: var(--bg-beige); /* Lighter color on hover */
   text-decoration:underline; /* Underline on hover */
 }
 
