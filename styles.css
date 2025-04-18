@@ -1,4 +1,5 @@
 /* Style for index.html, the Team Meeting Minutes*/
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap); /* Import Google fonts to be use on the website */
 :root { /* Define reusable CSS varibles here */
   --bg--beige: #f5eee3; /* Main background color */
   --text-dark: #3b2115; /* Main text color */
@@ -12,8 +13,6 @@
   --accent-peru: peru; /* Another peru color for accent */
   --wide-peru: color(diplay-p3 0.8 0.52 0.25); /* Wide-gamut color */
 }
-
-@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap); /* Import Google fonts to be use on the website */
 
 * { /* Reset default browser styles */
   box-sizing: border-box; /* Include padding in element sizing */
