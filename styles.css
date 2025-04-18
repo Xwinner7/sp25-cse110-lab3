@@ -1,10 +1,10 @@
 /* Style for index.html, the Team Meeting Minutes*/
-:root { /*Define reusable CSS varibles here*/
-  --bg--beige: #f5eee3; /*Main background color*/
-  --text-dark: #3b2115; /*Main text color*/
-  --git-red: #8a2e2e; /*The brand red color*/
-  --pure-white: #fdfdfd; /*Clean white color for cards*/
-  --accent-beige: #e7cab4; /*Light beige for accents*/
+:root { /* Define reusable CSS varibles here */
+  --bg--beige: #f5eee3; /* Main background color */
+  --text-dark: #3b2115; /* Main text color */
+  --git-red: #8a2e2e; /* The brand red color */
+  --pure-white: #fdfdfd; /* Clean white color for cards */
+  --accent-beige: #e7cab4; /* Light beige for accents */
   --dark-red: #552d1e; /* Dark red color for headings */
   --font-main: 'Open Sans', system-ui, sans-serif; /* Body font */
   --heading-font: 'Montserrat', system-ui, sans-serif; /* Headings font */
@@ -12,7 +12,6 @@
   --accent-peru: peru; /* Another peru color for accent */
   --wide-peru: color(diplay-p3 0.8 0.52 0.25); /* Wide-gamut color */
 }
-
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap); /* Import Google fonts to be use on the website */
 
 * { /* Reset default browser styles */
@@ -33,36 +32,30 @@ body { /* Styles for the entire page body */
 
 h1, h2, h3, h4 { /* Heading styles */
   font-family: var(--heading-font); /* Font for headings */
-  color: var(--dark-red); /* Dark red color for headings*/
+  color: var(--dark-red); /* Dark red color for headings */
   margin-bottom: 0.5em; /* Space below headings */
 }
-
 h1 { /* Main page title */
   font-size: 2.5rem; /* Large text */
   text-align: center; /* Center alignment */
   margin-bottom: 0.5rem; /* Reduced bottom margin */
 }
-
 h2 { /* Section headings */
   font-size: 1.8rem; /* Medium large font size */
   border-bottom: var(--border-default); /* Underline effect */
   padding-bottom: 0.3rem; /* Space between text and border */
 }
-
 h3 { /* Subheadings */
   font-size: 1.4rem; /* Font size to be slightly larger than body */
   color: var(--git-red); /* Color to be red */
 }
-
 h3 + p { /* Paragraphs immediately after h3 */
   margin-top: -0.5rem; /* Pull paragraph closer to heading */
   font-size: 0.95rem; /* Slightly smaller text size */
 }
-
 h2 ~ p { /* All paragraphs after h2 */
   color: color-mix(in srgb, var(--text-dark) 90%, transparent); /* Semi-transparent text */
 }
-
 main > section { /* Main content sections */
   transition: transform 0.2s ease; /* Smooth hover effect */
 }
@@ -74,12 +67,10 @@ header { /* Header section */
   box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow */
   margin-bottom: 2rem; /* Space below header */
 }
-
 nav { /* Navigation */
   margin-top: 1rem; /* Space above navigation */
   text-align: center; /* Center links */
 }
-
 nav a { /* Navigation links */
   color: var(--git-red); /* Red link color */
   text-decoration: none; /* Remove underlines */
@@ -87,7 +78,6 @@ nav a { /* Navigation links */
   padding: 0.5rem; /* Clickable area */
   transition: color 0.3s ease; /* Smooth color change */
 }
-
 nav a:hover { /* Hover state for links */
   color: --bg-beige; /* Lighter color on hover */
   text-decoration:underline; /* Underline on hover */
@@ -110,27 +100,23 @@ section { /* Content sections */
 #attendance ul { /* Attendance list */
   list-style-type: none; /* Remove default bullets */
 }
-
 #attendance li{
   padding: 0.3rem 0; /* Vertical spacing */
   position: relative; /* For custom bullet positioning */
   padding-left: 1.5rem; /* Space for custom bullet */
 }
-
 #attendance li:before { /* Custom bullet point */
   content: "•"; /* Bullet character */
   color: var(--git-red); /* Red color for the bullet */
   position: absolute; /* Position relative to li */
   left: 0; /* Align to left edge */
 }
-
 #agenda ol { /* Agenda ordered list */
   padding-left: 1.5rem; /* Indent list */
 }
 #agenda li { 
   margin-bottom: 0.5rem; /* Space between items */
 }
-
 #task div { /* Task container */
   border-left: 4px solid var(--git-red); /* Red accent border */
   padding-left: 1rem; /* Inner spacing */
@@ -152,15 +138,13 @@ details { /* Expandable details */
   border-radius: 4px; /* Rounded corners */
   margin-top: 1rem; /* Space above */
 }
-
-summary { /* Details summary */
-  cursor: pointer; /* Hand cursor */
-  font-weight: 600; /* Bold text */
-}
-
 details p { /* Details content */
   margin-top: 0.5rem; /* Space above */
   padding-left: 1rem; /* Indent content */
+}
+summary { /* Details summary */
+  cursor: pointer; /* Hand cursor */
+  font-weight: 600; /* Bold text */
 }
 
 #media img, #media video, #media audio { /* Media elements */
@@ -173,20 +157,17 @@ details p { /* Details content */
 form {
   margin-top: 1rem; /* Space above form */
 }
-
 fieldset { /* Form field groups */
   border: var(--border-default); /* Custom border */
   border-radius: 4px; /* Rounded corners */
   padding: 1rem; /* Inner spacing */
   margin-bottom: 1rem; /* Space below */
 }
-
 legend { /* Fieldset labels */
   padding: 0 0.5rem; /* Horizontal spacing */
   color: var(--git-red); /* Red color text */
   font-weight: 600; /* Bold text */
 }
-
 label { /* Form labels */
   display: block; /* Full width  */
   margin: 0.5rem 0 0.2rem; /* Spacing */
@@ -214,7 +195,6 @@ button[type="submit"] { /* Submit button */
   margin-top: 1rem; /* Space above */
   transition: background-color 0.3s ease; /* Color transition of background */
 }
-
 button[type="submit"]:hover { /* Submit button hover */
   background-color: var(--dark-red); /* Darker red background */
 }
@@ -222,6 +202,7 @@ button[type="submit"]:active { /* Submit button active state */
   transform: translateY(1px); /* Slight push down */
   box-shadow: 0 1px 2px rgba(0,0,0,0.2); /* Pressed effect */
 }
+
 .highlight-box { /* Highlight box that contains important content */
   margin: 1rem 0; /* Vertical spacing */
   margin-top: 0.5rem; /* Extra top margin */
@@ -235,7 +216,6 @@ button[type="submit"]:active { /* Submit button active state */
   max-width: 800px; /* Maximum width */
   background-color: color-mix(in srgb, var(--bg-beige) 90%, var(--accent-peru)); /* Mixed color background */
 }
-
 section.highlight-box { /* Highlight box section */
   border-left: 5px solid var(--accent-peru); /* Thicker left border */
   box-shadow: 0 3px 6px color-mix(in srgb, var(--dark-red) 15%, transparent); /* Subtle shadow */
@@ -247,6 +227,7 @@ button.submit-button { /* Submit button styling */
 button.submit-button:hover { /* Submit button hover state */
   background-color: color-mix(in srgb, var(--accent-peru) 80%, var(--dark-red)); /* Darker color when hovered */
 }
+
 footer {
   background-color:rgba(253, 245, 230, 0.9); /* Semi-transparent */
   text-align: center; /* Center content */
@@ -256,7 +237,7 @@ footer {
   font-size: 0.9rem; /* Smaller text size */
 }
 
-@media (min-width: 768px) { /* Medium screens for tablets */
+@media (min-width: 768px) { /* Medium screens display shown for tablets */
   #task div {
     display: flex; /* Flex layout */
     flex-direction: column; /* Vertical stacking */
@@ -269,7 +250,7 @@ footer {
     align-self: flex-start; /* Left align */
   }
 }
-@media (min-width: 992px) { /* Large screens for desktops */
+@media (min-width: 992px) { /* Large screens display shown for desktops */
   #media {
     display: grid; /* Grid layout */
     grid-template-columns: repeat(2, 1fr); /* Two columns */
@@ -280,7 +261,7 @@ footer {
     grid-column: span 2; /* Heading spans both columns */
   }
 }
-@media (max-width: 600px) { /* Small screens for mobile */
+@media (max-width: 600px) { /* Small screens display shown for mobile */
   body {
     padding: 1rem; /* Less padding */
   }
